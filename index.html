@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <nav>
+                    <img src="logo.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h1>Hi, I'm <span>Shaik Riyaaz Ali</span><br>From India</h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="user.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I am a passionate undergraduate student with a 
+                        degree in  Data Science, 
+                        possessing strong competencies in Python and Power 
+                        BI. With a solid foundation in data analysis and 
+                        machine learning, I excel at leveraging data to solve 
+                        complex problems. I am eager to apply my analytical 
+                        skills, collaborative mindset, and dedication to 
+                        continuous learning to contribute effectively in a 
+                        dynamic and cooperative environment.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                            <p class="tab-links" onclick="opentab('Languages')">Languages</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>UI</span><br>Designing Web interfaces</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id ="Education">
+                            <ul>
+                                <li><span>2023-Current</span><br>Computer Science and  Data Science at PVPSIT.</li>
+                                <li><span>2021-2023</span><br>Intermediate from  Sri Chaitanya Education Institutions.</li>
+                                <li><span>2019-2020</span><br>SSC from Sri Chaitanya School.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Languages">
+                            <ul>
+                                <li style="display: flex; align-items: center; gap: 10px;"><span>JAVA</span><img src="javalogo.png" width="85" height="85"></li>
+                                <li style="display: flex; align-items: center; gap: 10px;"><span>Python</span><img src="pylogo.png" width="45" height="45"></li>
+                                <li style="display: flex; align-items: center; gap: 10px;"><span>HTML</span><img src="html.png" width="45" height="45"></li>
+                                <li style="display: flex; align-items: center; gap: 10px;"><span>CSS</span><img src="css.png" width="50" height="50"></li>
+                                <li style="display: flex; align-items: center; gap: 10px;"><span>JavaScript</span><img src="js.png" width="65" height="45"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                    <div class="work-list">
+                        <div class="work">
+                            <img src="bmi.png" width="79px" height="221px">
+                            <div class="layer">
+                                <h3>Body Mass Index Calculator</h3>
+                                <p>Calculating the BMI using the Metric Units and Imperial Units</p>
+                                <a href="https://github.com/riyaaz5105/BMIcalculator"> <i class="fa-solid fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="p1.png" width="79px" height="221px">
+                            <div class="layer">
+                                <h3>Upcoming Project</h3>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="p1.png" width="79px" height="221px">
+                            <div class="layer">
+                                <h3>Upcoming Project</h3>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="p1.png" width="79px" height="221px">
+                            <div class="layer">
+                                <h3>Upcoming Project</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>contact-@skriyaazali.2005@gmail.com</p>
+                            <div class="social-icons">
+                                <a href="https://github.com/riyaaz5105"><i class="fa-brands fa-github"></i></a>
+                                <a href="www.linkedin.com/in/riyaaz-ali-4a5702300"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/_r_iya_az"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        <a href="CV.pdf" class="btn btn2">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+        <script>
+            var sidemenu=document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right="0";
+            }
+            function closemenu(){
+                sidemenu.style.right="-200px";
+            }
+        </script>
+    </body>
+</html>
